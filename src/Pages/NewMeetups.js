@@ -1,7 +1,7 @@
 import React from "react";
 
-const NewMeetups = () => {
+function NewMeetupsPage() {
   return <div>NewMeetups Page</div>;
-};
+}
 
-export default NewMeetups;
+export default NewMeetupsPage;

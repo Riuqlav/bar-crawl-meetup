@@ -1,7 +1,7 @@
 import React from "react";
 
-const AllMeetups = () => {
+function AllMeetupsPage() {
   return <div>AllMeetups Page</div>;
-};
+}
 
-export default AllMeetups;
+export default AllMeetupsPage;

@@ -1,25 +1,22 @@
 import React from "react";
-import { Route } from "react-router-dom";
-import AllMeetups from "./Pages/AllMeetups";
-import NewMeetups from "./Pages/NewMeetups";
-import Favorites from "./Pages/Favorites";
+import { Route, Routes } from "react-router-dom";
+import AllMeetupsPage from "./Pages/AllMeetups";
+import NewMeetupsPage from "./Pages/NewMeetups";
+import FavoritesPage from "./Pages/Favorites";
+import MainNavigation from "./Components/Layout/MainNavigation";
 
-const App = () => {
+function App() {
   return (
     <div>
-      <Route path="/">
-        <AllMeetups />
-      </Route>
+      <MainNavigation />
 
-      <Route path="/favorites">
-        <Favorites />
-      </Route>
-
-      <Route path="/new-meetups">
-        <NewMeetups />
-      </Route>
+      <Routes>
+        <Route path="/" element={<AllMeetupsPage />} />
+        <Route path="/new-meetup" element={<NewMeetupsPage />} />
+        <Route path="/favorites" element={<FavoritesPage />} />
+      </Routes>
     </div>
   );
-};
+}
 
 export default App;

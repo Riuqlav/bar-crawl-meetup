@@ -10,7 +10,7 @@ function App() {
     <Layout>
       <Routes>
         <Route path="/" element={<AllMeetupsPage />} />
-        <Route path="/new-meetup" element={<NewMeetupsPage />} />
+        <Route path="/new-meetups" element={<NewMeetupsPage />} />
         <Route path="/favorites" element={<FavoritesPage />} />
       </Routes>
     </Layout>

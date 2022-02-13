@@ -1,10 +1,10 @@
-/* * {
+* {
   box-sizing: border-box;
 }
 
 body {
   font-family: sans-serif;
-  margin: 3rem;
+  margin: 1rem;
   background-color: #dfdfdf;
 }
 
@@ -71,4 +71,4 @@ h2 {
   height: 100vh;
   top: 0;
   left: 0;
-} */
+}

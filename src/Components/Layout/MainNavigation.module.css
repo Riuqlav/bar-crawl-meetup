@@ -3,9 +3,8 @@
   height: 5rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #77002e;
-  padding: 0 10%;
 }
 
 .logo {

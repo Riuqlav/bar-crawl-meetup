@@ -2,10 +2,14 @@ import React from "react";
 import Card from "../UI/Card";
 import classes from "./NewMeetupForm.module.css";
 
-const NewMeetupForm = () => {
+function NewMeetupForm() {
+  function submitHandler(event) {
+    event.preventDefault();
+  }
+
   return (
     <Card>
-      <form className={classes.form}>
+      <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
           <label htmlFor="title">Meetup Title</label>
           <input type="text" required id="title" />
@@ -19,12 +23,12 @@ const NewMeetupForm = () => {
           <label htmlFor="description">Description</label>
           <textarea id="description" required rows="5"></textarea>{" "}
         </div>
-        <div className={classes.action}>
+        <div className={classes.actions}>
           <button>Add Meetup</button>
         </div>
       </form>
     </Card>
   );
-};
+}
 
 export default NewMeetupForm;

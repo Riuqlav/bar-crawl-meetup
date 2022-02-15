@@ -13,10 +13,20 @@ function AllMeetupsPage() {
         return response.json();
       })
       .then((data) => {
+        const meetups = [];
+        for (const key in data) {
+          const meetup = {
+            id: key,
+            ...data[key],
+          };
+
+          meetups.push(meetup);
+        }
+
         setIsLoading(false);
-        setLoadedMeetups(data);
+        setLoadedMeetups(meetups);
       });
-  }, [third]);
+  }, []);
 
   if (isLoading) {
     return (

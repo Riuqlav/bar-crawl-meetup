@@ -9,7 +9,7 @@ const MeetupItem = (props) => {
 
   const itemIsFavorite = favoritesCtx.itemIsFavorite(props.id);
 
-  function toggleFavStatusHandler(props) {
+  function toggleFavStatusHandler() {
     if (itemIsFavorite) {
       favoritesCtx.removeFavorite(props.id);
     } else {

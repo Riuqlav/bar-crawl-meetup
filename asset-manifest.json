@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/bar-crawl-meetup/static/css/main.a92fcdc4.css",
+    "main.js": "/bar-crawl-meetup/static/js/main.ab48b421.js",
+    "index.html": "/bar-crawl-meetup/index.html",
+    "main.a92fcdc4.css.map": "/bar-crawl-meetup/static/css/main.a92fcdc4.css.map",
+    "main.ab48b421.js.map": "/bar-crawl-meetup/static/js/main.ab48b421.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a92fcdc4.css",
+    "static/js/main.ab48b421.js"
+  ]
+}

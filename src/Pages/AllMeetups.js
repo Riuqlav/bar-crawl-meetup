@@ -8,7 +8,7 @@ function AllMeetupsPage() {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://bar-meetup-default-rtdb.firebaseio.com/meetups.json")
+    fetch("https://bar-meetup-default-rtdb.firebaseio.com/")
       .then((response) => {
         return response.json();
       })

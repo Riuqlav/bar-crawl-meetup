@@ -3,14 +3,16 @@
   height: 5rem;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   background-color: #77002e;
 }
 
 .logo {
+  font-family: "Urbanist", sans-serif;
   font-size: 2rem;
   color: white;
   font-weight: bold;
+  padding: 20px;
 }
 
 .header ul {
@@ -43,4 +45,6 @@
   border-radius: 12px;
   padding: 0 1rem;
   margin-left: 0.5rem;
+  margin-right: 20px;
+  align-items: center;
 }

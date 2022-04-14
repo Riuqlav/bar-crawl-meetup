@@ -9,12 +9,18 @@ function App() {
   return (
     <Layout>
       <Routes>
-        <Route path="/" element={<AllMeetupsPage />} />
+        <Route exact path="/" element={<AllMeetupsPage />} />
         <Route path="/new-meetups" element={<NewMeetupsPage />} />
         <Route path="/favorites" element={<FavoritesPage />} />
       </Routes>
     </Layout>
   );
 }
+
+// <BrowserRouter basename={window.location.pathname || ""}>
+// <Routes>
+//   <Route exact path="/" element={<Home />}></Route>
+// </Routes>
+// </BrowserRouter>
 
 export default App;

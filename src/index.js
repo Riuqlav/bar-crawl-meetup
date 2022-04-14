@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 import { FavoritesContextProvider } from "./Store/Favorites-context";
 ReactDOM.render(
   <FavoritesContextProvider>
-    <BrowserRouter>
+    <BrowserRouter basename={window.location.pathname || ""}>
       <App />
     </BrowserRouter>
   </FavoritesContextProvider>,

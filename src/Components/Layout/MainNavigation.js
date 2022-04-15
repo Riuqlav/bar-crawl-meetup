@@ -9,7 +9,10 @@ const MainNavigation = () => {
 
   return (
     <header className={classes.header}>
-      <div className={classes.logo}>BAR CRAWL PROJECT</div>
+      <a href="/">
+        {" "}
+        <div className={classes.logo}>BAR CRAWL PROJECT</div>
+      </a>
       <nav>
         <ul>
           <li>

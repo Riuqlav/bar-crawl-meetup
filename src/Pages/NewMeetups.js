@@ -6,7 +6,7 @@ function NewMeetupsPage() {
   const navigate = useNavigate();
 
   function addMeetupHandler(meetupData) {
-    fetch("https://bar-meetup-default-rtdb.firebaseio.com/", {
+    fetch("https://bar-crawl-meetup-default-rtdb.firebaseio.com/meetups.json", {
       method: "POST",
       body: JSON.stringify(meetupData),
       headers: { "Content-Type": "application/json" },

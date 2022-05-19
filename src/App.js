@@ -17,10 +17,4 @@ function App() {
   );
 }
 
-// <BrowserRouter basename={window.location.pathname || ""}>
-// <Routes>
-//   <Route exact path="/" element={<Home />}></Route>
-// </Routes>
-// </BrowserRouter>
-
 export default App;

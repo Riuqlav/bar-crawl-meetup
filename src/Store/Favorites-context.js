@@ -1,6 +1,6 @@
 import React from "react";
 import { createContext, useState } from "react";
-
+//switch between functions with createContext, stackoverflow
 const FavoritesContext = createContext({
   favorites: [],
   totalFavorites: 0,

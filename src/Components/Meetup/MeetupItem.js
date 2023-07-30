@@ -1,8 +1,9 @@
 import { useContext } from "react";
 import React from "react";
-import Card from "../UI/Card";
-import classes from "./MeetupItem.module.css";
+import Card from "../Layout/Card";
 import FavoritesContext from "../../Store/Favorites-context";
+import { IconButton } from "@material-ui/core";
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 const MeetupItem = (props) => {
   const favoritesCtx = useContext(FavoritesContext);
@@ -24,21 +25,20 @@ const MeetupItem = (props) => {
   }
 
   return (
-    <li className={classes.item}>
-      {" "}
+    <li className="border-2 border-gray-300 rounded-lg my-4 shadow-md overflow-hidden transform transition-transform duration-700 hover:scale-105">
       <Card>
-        <div className={classes.image}>
-          <img src={props.image} alt={props.title} />
+        <div className="w-full">
+          <img className="w-full h-64 object-cover" src={props.image} alt={props.title} />
         </div>
-        <div className={classes.content}>
-          <h3>{props.title}</h3>
-          <address>{props.address}</address>
-          <p>{props.description}</p>
+        <div className="p-4">
+          <h3 className="text-2xl font-bold mb-2">{props.title}</h3>
+          <address className="italic mb-2">{props.address}</address>
+          <p className="mb-2">{props.description}</p>
         </div>
-        <div className={classes.actions}>
-          <button onClick={toggleFavStatusHandler}>
-            {itemIsFavorite ? "Remove from Favorites" : "To Favorites"}
-          </button>
+        <div className="flex justify-end px-4 pb-4">
+          <IconButton aria-label="add to favorites" onClick={toggleFavStatusHandler}>
+            <FavoriteIcon color={itemIsFavorite ? "secondary" : "disabled"} />
+          </IconButton>
         </div>
       </Card>
     </li>

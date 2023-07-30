@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import AllMeetupsPage from "./Pages/AllMeetups";
-import NewMeetupsPage from "./Pages/NewMeetups";
-import FavoritesPage from "./Pages/Favorites";
+import AllMeetupsPage from "./Pages/AllMeetupsPage";
+import NewMeetupsPage from "./Pages/NewMeetupsPage";
+import FavoritesPage from "./Pages/FavoritesPage";
 import Layout from "./Components/Layout/Layout";
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
     <Layout>
       <Routes>
         <Route exact path="/" element={<AllMeetupsPage />} />
-        <Route path="/new-meetups" element={<NewMeetupsPage />} />
+        <Route path="/new-meetup" element={<NewMeetupsPage />} />
         <Route path="/favorites" element={<FavoritesPage />} />
       </Routes>
     </Layout>

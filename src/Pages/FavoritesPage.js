@@ -9,14 +9,14 @@ function FavoritesPage() {
   let content;
 
   if (favoritesCtx.totalFavorites === 0) {
-    content = <p>You have no favorites, how about we add some?</p>;
+    content = <p className="p-4" >You have no favorites, how about we add some?</p>;
   } else {
-    content = <MeetupList meetups={favoritesCtx.favorites} />;
+    content = <MeetupList meetups={favoritesCtx.favorites}/>;
   }
 
   return (
     <section>
-      <h1>My Favorites</h1>
+      <h1 className="text-3xl bold p-4">My Favorites</h1>
       {content}{" "}
     </section>
   );

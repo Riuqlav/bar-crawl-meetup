@@ -1,13 +1,13 @@
 import React from "react";
 import MainNavigation from "./MainNavigation";
-import classes from "./Layout.module.css";
 
 const Layout = (props) => {
   return (
-    <div>
-      {" "}
+    <div className="flex flex-col min-h-screen bg-gray-100">
       <MainNavigation />
-      <main className={classes.main}>{props.children}</main>
+      <main className="flex-grow container mx-auto p-4">
+        {props.children}
+      </main>
     </div>
   );
 };

@@ -1,6 +1,6 @@
+import React, { useState, useEffect } from "react";
 import MeetupList from "../Components/Meetup/MeetupList";
-import React from "react";
-import { useState, useEffect } from "react";
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 function AllMeetupsPage() {
   const [isLoading, setIsLoading] = useState(true);
@@ -13,8 +13,6 @@ function AllMeetupsPage() {
         return response.json();
       })
       .then((data) => {
-        //Helper array to transform the data(encrypted gibberish props of each object)
-        //from firebase, into an array of objects//
         const meetups = [];
         for (const key in data) {
           const meetup = {
@@ -33,14 +31,14 @@ function AllMeetupsPage() {
   if (isLoading) {
     return (
       <section>
-        <p>Loading...</p>
+        <CircularProgress />
       </section>
     );
   }
 
   return (
     <section>
-      <h1>All Meetups</h1>
+      <h1 className="text-3xl bold p-4" >All Meetups</h1>
       <MeetupList meetups={loadedMeetups} />
     </section>
   );

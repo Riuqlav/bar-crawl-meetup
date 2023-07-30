@@ -10,14 +10,24 @@ function NewMeetupsPage() {
       method: "POST",
       body: JSON.stringify(meetupData),
       headers: { "Content-Type": "application/json" },
-    }).then(() => {
+    })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error('Something went wrong!');
+      }
+      return response.json();
+    })
+    .then(() => {
       navigate("/", { replace: true });
+    })
+    .catch((error) => {
+      console.error('Fetch error:', error);
     });
   }
 
   return (
     <section>
-      <h1>Add New Meetup</h1>
+      <h1 className="text-3xl bold p-4" >Add New Meetup</h1>
       <NewMeetupForm onAddMeetup={addMeetupHandler} />
     </section>
   );
